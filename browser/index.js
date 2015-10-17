@@ -1,8 +1,8 @@
 window.Promise = require('bluebird');
 var plastiq = require('plastiq');
-var voteApp = require('./voteApp');
+var createApp = require('./app');
 
-var app = voteApp();
+var app = createApp();
 
 app.start();
 

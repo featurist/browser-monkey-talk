@@ -5,6 +5,7 @@ var browserify = require('browserify-middleware');
 var bodyParser = require('body-parser');
 var ms = require('ms');
 var _ = require('underscore');
+var less = require('express-less');
 
 var app = express();
 
@@ -23,34 +24,26 @@ app.use(session({
   saveUninitialized: true
 }));
 
-var playlist = {};
-var playlistId = 1;
+var images = {};
+var imageId = 1;
 
-app.use(express.static(__dirname + '/../browser/style'));
+app.use('/fonts', express.static(__dirname + '/../node_modules/font-awesome/fonts'));
 app.use(express.static(__dirname + '/public'));
 app.use('/font-awesome/css', express.static(__dirname + '/../node_modules/font-awesome/css'));
 app.use('/font-awesome/fonts', express.static(__dirname + '/../node_modules/font-awesome/fonts'));
 
-app.get('/vote.js', browserify(__dirname + '/../browser/vote.js', {
+app.use('/style', less(__dirname + '/../browser/style', {debug: true}));
+app.get('/index.js', browserify(__dirname + '/../browser/index.js', {
   transform: ['plastiq-jsxify'],
   extensions: ['.jsx']
 }));
-
-app.get('/play.js', browserify(__dirname + '/../browser/play.js', {
-  transform: ['plastiq-jsxify'],
-  extensions: ['.jsx']
-}));
-
-app.get('/play', function (req, res) {
-  res.render("play.html");
-});
 
 app.get('/', function (req, res) {
   res.render("index.html");
 });
 
-function sortedPlaylist() {
-  return _.values(playlist).sort(function (left, right) {
+function sortedImages() {
+  return _.values(images).sort(function (left, right) {
     if (left.score == right.score) {
       if (left.timeAdded == right.timeAdded) {
         return 0;
@@ -67,19 +60,19 @@ function sortedPlaylist() {
   });
 }
 
-app.get('/playlist', function (req, res) {
-  res.send(sortedPlaylist().map(function (item) {
+app.get('/images', function (req, res) {
+  res.send(sortedImages().map(function (item) {
     var copy = JSON.parse(JSON.stringify(item));
     copy.vote = sessionVotes(req)[copy.id];
     return copy;
   }));
 });
 
-app.delete('/playlist/:id', function (req, res) {
+app.delete('/images/:id', function (req, res) {
   var id = req.params.id;
 
-  if (playlist[id]) {
-    delete playlist[id];
+  if (images[id]) {
+    delete images[id];
     res.status(204).send();
   } else {
     res.status(404).send();
@@ -94,27 +87,30 @@ function sessionVotes(req) {
   }
 }
 
-app.post('/playlist/:id/:vote', function (req, res) {
+app.post('/images/:id/:vote', function (req, res) {
   var votes = sessionVotes(req);
   var id = req.params.id;
   var vote = Number(req.params.vote);
   var existingVote = votes[id] || 0;
 
-  playlist[id].score += vote - existingVote;
+  images[id].score += vote - existingVote;
   votes[id] = vote;
 
   res.send();
 });
 
-app.post('/playlist', function (req, res) {
-  var id = playlistId++;
+function sendImages() {
+}
+
+app.post('/images', function (req, res) {
+  var id = imageId++;
 
   req.body.id = id;
   req.body.score = 0;
-  req.body.href = '/playlist/' + id;
-  req.body.voteHrefTemplate = '/playlist/' + id + '/{vote}';
+  req.body.href = '/images/' + id;
+  req.body.voteHrefTemplate = '/images/' + id + '/{vote}';
   req.body.timeAdded = Date.now();
-  playlist[id] = req.body;
+  images[id] = req.body;
 
   res.send();
 });

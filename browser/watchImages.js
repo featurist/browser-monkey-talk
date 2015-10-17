@@ -2,7 +2,7 @@ var httpism = require('httpism');
 
 function watchPlaylist(fn, n) {
   function load() {
-    httpism.get('/playlist').then(function (response) {
+    httpism.get('/images').then(function (response) {
       fn(response.body);
       setTimeout(load, n);
     }, function (error) {

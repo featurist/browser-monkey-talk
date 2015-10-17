@@ -1,0 +1,45 @@
+{
+  "name": "heart-of-soundcloud",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bluebird": "2.10.2",
+    "body-parser": "1.14.1",
+    "browserify-middleware": "7.0.0",
+    "connect-redis": "3.0.0",
+    "ejs": "2.3.4",
+    "express": "4.13.3",
+    "express-session": "1.11.3",
+    "font-awesome": "4.4.0",
+    "httpism": "1.7.1",
+    "ms": "0.7.1",
+    "plastiq": "1.23.0",
+    "plastiq-jsxify": "1.0.0",
+    "plastiq-loader": "1.1.0",
+    "plastiq-router": "2.10.2",
+    "soundcloud": "3.0.1",
+    "underscore": "1.8.3"
+  },
+  "devDependencies": {
+    "browser-monkey": "1.23.0",
+    "chai": "3.3.0",
+    "chai-as-promised": "5.1.0",
+    "karma": "0.13.10",
+    "karma-browserify": "4.4.0",
+    "karma-chrome-launcher": "0.2.1",
+    "karma-mocha": "0.2.0",
+    "karma-mocha-reporter": "1.1.1",
+    "mocha": "2.3.3",
+    "mock-xhr-router": "1.6.0",
+    "pogo": "0.10.0",
+    "qo": "1.3.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}

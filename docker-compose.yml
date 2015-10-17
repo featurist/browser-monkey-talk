@@ -1,0 +1,14 @@
+web:
+  build: .
+  ports:
+    - "80:4000"
+rsync:
+  build: .
+  dockerfile: rsync.dockerfile
+  ports:
+    - "2222:22"
+  volumes_from:
+    - web
+  environment:
+    AUTHORIZED_KEYS: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCc8zXgiXxDV7ICZv+Y9ToXCA5+6cnGoQNNv6DT62tyvePGyxAAjWr8nW1M+KMDMWdgEqxHQxQjnHOeyPPfB9SXpVIdlb7M27pWQCvS33Uhk7uQktc1bp0WNehZ9JBU/sKV1AJL35zrNZTRmyLkqEvZulEdGQvX77Lna+1aKtD5iPlDOyph9uJTH7FozEGGysHlO5QaasWlC6E22PXa/ljiSHMfA5V+SFCRf4PhUVIORaCg3x4vEwu4zPVe45UitEE5uiQxxEn0gdfVWFadY3dq/2lcCIln/jH13ytTbPP0Ie+dTU77I2gcCM0KLJVgdQ5XmTp+3HDuPosCgiJXxNXR tim@surf.local
+

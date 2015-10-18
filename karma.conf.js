@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'style.css',
+      'browser/style/style.css',
       'node_modules/todomvc-common/base.css',
       'node_modules/todomvc-app-css/index.css',
       'test/**/*Spec.js'

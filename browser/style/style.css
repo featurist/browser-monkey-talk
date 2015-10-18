@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.4.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ul li .buttons .up,
+ul li .buttons .down {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+ul li .buttons .up:before {
+  content: "\f062";
+}
+ul li .buttons .down:before {
+  content: "\f063";
+}
+form {
+  text-align: center;
+}
+form input[type=text] {
+  width: 800px;
+  margin: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid gray;
+  padding: 10px;
+  font-size: 15px;
+}
+ul {
+  width: 450px;
+  margin: 0 auto;
+  padding-left: 0;
+}
+ul li {
+  position: relative;
+  list-style-type: none;
+  text-align: center;
+}
+ul li img {
+  width: 400px;
+}
+ul li .buttons {
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  width: 25px;
+}
+ul li .buttons button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  margin-bottom: 5px;
+  outline: none;
+  color: black;
+}
+ul li .buttons .score {
+  background: white;
+  border-radius: 50px;
+  min-width: 9px;
+  padding: 4px 8px 3px 8px;
+  font-family: sans-serif;
+  display: block;
+  margin-bottom: 5px;
+  text-align: right;
+  font-weight: bold;
+}
+ul li .buttons button.up,
+ul li .buttons button.down {
+  display: block;
+}
+ul li .buttons button.up:hover,
+ul li .buttons button.down:hover {
+  box-shadow: 0px 0px 10px rgba(134, 134, 134, 0.34);
+}
+ul li .buttons button.voted {
+  color: #03A9F4;
+}
+ul li:hover .buttons,
+ul li:hover .score {
+  display: block;
+}

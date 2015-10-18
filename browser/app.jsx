@@ -28,8 +28,8 @@ module.exports = function () {
 
       return <li>
         <img src={image.url}></img>
-        <div class="score">{image.score}</div>
         <div class="buttons">
+          <div class="score">{image.score}</div>
           <button class={{up: true, voted: image.vote == 1}} onclick={placeVote(1)}></button>
           <button class={{down: true, voted: image.vote == -1}} onclick={placeVote(-1)}></button>
         </div>

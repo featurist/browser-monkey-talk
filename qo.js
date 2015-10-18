@@ -4,7 +4,7 @@ function api(options) {
   var url = {
     'prod': 'http://' + process.env.docker + '/',
     'local': 'http://localhost:4000'
-  }[options.env || 'local'];
+  }[options.env || 'prod'];
 
   return httpism.api(url);
 }
@@ -26,7 +26,8 @@ task('images', function (args, options) {
 task('put-images', function (args, options) {
   var images = [
     'https://media.giphy.com/media/uQV647HiKyyje/giphy.gif',
-    'https://media.giphy.com/media/14qI1vDMDPCcda/giphy.gif'
+    'https://media.giphy.com/media/14qI1vDMDPCcda/giphy.gif',
+    'http://pimg.tradeindia.com/01166208/b/1/CAMP-HAWK-The-Paragliding-Camp.jpg'
   ];
 
   return Promise.all(images.map(function (url) {

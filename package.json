@@ -12,6 +12,7 @@
     "connect-redis": "3.0.0",
     "ejs": "2.3.4",
     "express": "4.13.3",
+    "express-less": "0.0.8",
     "express-session": "1.11.3",
     "font-awesome": "4.4.0",
     "httpism": "1.7.1",

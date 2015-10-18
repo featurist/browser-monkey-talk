@@ -62,9 +62,9 @@ function sortedImages() {
 
 app.get('/images', function (req, res) {
   res.send(sortedImages().map(function (item) {
-    var copy = JSON.parse(JSON.stringify(item));
-    copy.vote = sessionVotes(req)[copy.id];
-    return copy;
+    var image = JSON.parse(JSON.stringify(item));
+    image.vote = sessionVotes(req)[image.id] || 0;
+    return image;
   }));
 });
 
@@ -99,20 +99,30 @@ app.post('/images/:id/:vote', function (req, res) {
   res.send();
 });
 
-function sendImages() {
+function findExistingImage(url) {
+  var imagesByUrl = _.indexBy(_.values(images), 'url');
+  return imagesByUrl[url];
 }
 
 app.post('/images', function (req, res) {
-  var id = imageId++;
+  var existingImage = findExistingImage(req.body.url);
 
-  req.body.id = id;
-  req.body.score = 0;
-  req.body.href = '/images/' + id;
-  req.body.voteHrefTemplate = '/images/' + id + '/{vote}';
-  req.body.timeAdded = Date.now();
-  images[id] = req.body;
+  if (existingImage) {
+    res.header('Location', '/images/' + existingImage.id);
+    res.status(201).send();
+  } else {
+    var id = imageId++;
 
-  res.send();
+    req.body.id = id;
+    req.body.score = 0;
+    req.body.href = '/images/' + id;
+    req.body.voteHrefTemplate = '/images/' + id + '/{vote}';
+    req.body.timeAdded = Date.now();
+    images[id] = req.body;
+
+    res.header('Location', '/images/' + req.body.id);
+    res.status(201).send();
+  }
 });
 
 module.exports = app;

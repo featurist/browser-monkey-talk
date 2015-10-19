@@ -16,13 +16,15 @@
     "express-session": "1.11.3",
     "font-awesome": "4.4.0",
     "httpism": "1.7.1",
+    "mock-xhr-router": "1.6.0",
     "ms": "0.7.1",
-    "plastiq": "1.23.0",
+    "plastiq": "1.24.0",
     "plastiq-jsxify": "1.0.0",
     "plastiq-loader": "1.1.0",
     "plastiq-router": "2.10.2",
     "soundcloud": "3.0.1",
-    "underscore": "1.8.3"
+    "underscore": "1.8.3",
+    "unset-timeout": "1.0.0"
   },
   "devDependencies": {
     "browser-monkey": "1.23.0",

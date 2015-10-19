@@ -6,6 +6,8 @@ var bodyParser = require('body-parser');
 var ms = require('ms');
 var _ = require('underscore');
 var less = require('express-less');
+var sortImages = require('./sortImages');
+var findExistingImage = require('./findExistingImage');
 
 var app = express();
 
@@ -42,26 +44,8 @@ app.get('/', function (req, res) {
   res.render("index.html");
 });
 
-function sortedImages() {
-  return _.values(images).sort(function (left, right) {
-    if (left.score == right.score) {
-      if (left.timeAdded == right.timeAdded) {
-        return 0;
-      } else if (left.timeAdded < right.timeAdded) {
-        return -1;
-      } else {
-        return 1;
-      }
-    } else if (left.score < right.score) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
-}
-
 app.get('/images', function (req, res) {
-  res.send(sortedImages().map(function (item) {
+  res.send(sortImages(images).map(function (item) {
     var image = JSON.parse(JSON.stringify(item));
     image.vote = sessionVotes(req)[image.id] || 0;
     return image;
@@ -99,13 +83,8 @@ app.post('/images/:id/:vote', function (req, res) {
   res.send();
 });
 
-function findExistingImage(url) {
-  var imagesByUrl = _.indexBy(_.values(images), 'url');
-  return imagesByUrl[url];
-}
-
 app.post('/images', function (req, res) {
-  var existingImage = findExistingImage(req.body.url);
+  var existingImage = findExistingImage(images, req.body.url);
 
   if (existingImage) {
     res.header('Location', '/images/' + existingImage.id);

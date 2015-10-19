@@ -1,12 +1,5 @@
 var mountDiv;
 
-if (/\/debug\.html$/.test(location.pathname)) {
-  var refreshLink = document.createElement('a');
-  refreshLink.href = location.pathname;
-  refreshLink.innerText = 'Refresh';
-  document.body.appendChild(refreshLink);
-}
-
 module.exports = function (options) {
   if (mountDiv) {
     mountDiv.parentNode.removeChild(mountDiv);

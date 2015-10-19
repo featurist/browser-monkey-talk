@@ -1,7 +1,7 @@
 var router = require('mock-xhr-router');
 var _ = require('underscore');
 var sortImages = require('../../server/sortImages');
-var findExistingImage = require('./findExistingImage');
+var findExistingImage = require('../../server/findExistingImage');
 
 module.exports = function () {
   var images = {};
@@ -57,27 +57,38 @@ module.exports = function () {
     }
   });
 
-  api.post('/images/:id/:vote', function (req) {
-    var id = req.params.id;
-    var image = images[id];
-    var vote = Number(req.params.vote);
+  function voteOnImage(image, vote) {
     var existingVote = image.vote;
 
     image.score += vote - existingVote;
     image.vote = vote;
+  }
+
+  api.post('/images/:id/:vote', function (req) {
+    var id = req.params.id;
+    var image = images[id];
+
+    if (image) {
+      voteOnImage(image, Number(req.params.vote));
+    } else {
+      return {
+        statusCode: 404
+      }
+    }
   });
 
   return {
     addImage: addImage,
-
-    images: function () {
-      return _.values(images);
-    }
-
-    imageUrls: function () {
-      return _.values(images).map(function (image) {
-        return image.url;
+    voteOnImage: function (url, vote) {
+      var image = _.values(images).find(function (image) {
+        return image.url.indexOf(url) >= 0;
       });
+
+      if (!image) {
+        throw new Error('image (' + url + ') not found');
+      }
+
+      voteOnImage(image, vote);
     }
   }
 };

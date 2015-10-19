@@ -16,8 +16,8 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'browser/style/style.css',
-      'node_modules/todomvc-common/base.css',
-      'node_modules/todomvc-app-css/index.css',
+      {pattern: 'test/browser/images/*', included: false, served: true},
+      {pattern: 'node_modules/font-awesome/fonts/**', included: false, served: true},
       'test/**/*Spec.js'
     ],
 
@@ -38,6 +38,11 @@ module.exports = function(config) {
       debug: true,
       transform: ['plastiq-jsxify'],
       extensions: ['.jsx']
+    },
+
+    proxies: {
+      '/images/': '/base/test/browser/images/',
+      '/base/browser/fonts/': '/base/node_modules/font-awesome/fonts/'
     },
 
     // test results reporter to use

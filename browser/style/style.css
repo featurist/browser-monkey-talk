@@ -5,8 +5,8 @@
   font-weight: normal;
   font-style: normal;
 }
-ul li .buttons .up,
-ul li .buttons .down {
+ol li .buttons .up,
+ol li .buttons .down {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -14,10 +14,10 @@ ul li .buttons .down {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-ul li .buttons .up:before {
+ol li .buttons .up:before {
   content: "\f062";
 }
-ul li .buttons .down:before {
+ol li .buttons .down:before {
   content: "\f063";
 }
 form {
@@ -32,27 +32,27 @@ form input[type=text] {
   padding: 10px;
   font-size: 15px;
 }
-ul {
+ol {
   width: 450px;
   margin: 0 auto;
   padding-left: 0;
 }
-ul li {
+ol li {
   position: relative;
   list-style-type: none;
   text-align: center;
 }
-ul li img {
+ol li img {
   width: 400px;
 }
-ul li .buttons {
+ol li .buttons {
   display: none;
   position: absolute;
   top: 10px;
   left: 13px;
   width: 25px;
 }
-ul li .buttons button {
+ol li .buttons button {
   border: none;
   background-color: white;
   cursor: pointer;
@@ -63,7 +63,7 @@ ul li .buttons button {
   outline: none;
   color: black;
 }
-ul li .buttons .score {
+ol li .buttons .score {
   background: white;
   border-radius: 50px;
   min-width: 9px;
@@ -74,18 +74,18 @@ ul li .buttons .score {
   text-align: right;
   font-weight: bold;
 }
-ul li .buttons button.up,
-ul li .buttons button.down {
+ol li .buttons button.up,
+ol li .buttons button.down {
   display: block;
 }
-ul li .buttons button.up:hover,
-ul li .buttons button.down:hover {
+ol li .buttons button.up:hover,
+ol li .buttons button.down:hover {
   box-shadow: 0px 0px 10px rgba(134, 134, 134, 0.34);
 }
-ul li .buttons button.voted {
+ol li .buttons button.voted {
   color: #03A9F4;
 }
-ul li:hover .buttons,
-ul li:hover .score {
+ol li:hover .buttons,
+ol li:hover .score {
   display: block;
 }

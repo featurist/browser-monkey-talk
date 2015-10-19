@@ -8,6 +8,7 @@
   "dependencies": {
     "bluebird": "2.10.2",
     "body-parser": "1.14.1",
+    "browser-monkey": "1.25.0",
     "browserify-middleware": "7.0.0",
     "connect-redis": "3.0.0",
     "ejs": "2.3.4",
@@ -23,6 +24,7 @@
     "plastiq-loader": "1.1.0",
     "plastiq-router": "2.10.2",
     "soundcloud": "3.0.1",
+    "trytryagain": "1.1.0",
     "underscore": "1.8.3",
     "unset-timeout": "1.0.0"
   },

@@ -79,6 +79,7 @@ module.exports = function () {
 
   return {
     addImage: addImage,
+
     voteOnImage: function (url, vote) {
       var image = _.values(images).find(function (image) {
         return image.url.indexOf(url) >= 0;
@@ -89,6 +90,10 @@ module.exports = function () {
       }
 
       voteOnImage(image, vote);
+    },
+
+    images: function () {
+      return _.values(images);
     }
   }
 };

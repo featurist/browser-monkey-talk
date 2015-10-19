@@ -46,6 +46,7 @@ task('get-images', function (args, options) {
     'https://media.giphy.com/media/uQV647HiKyyje/giphy.gif',
     'https://media.giphy.com/media/14qI1vDMDPCcda/giphy.gif',
     'http://33.media.tumblr.com/5d933dbea55d887f28bb467c67bcb356/tumblr_mojk1em3ew1r4xjo2o1_250.gif',
+    'http://i782.photobucket.com/albums/yy106/biterness2323/fuuuuuuuuu.jpg',
     'http://pimg.tradeindia.com/01166208/b/1/CAMP-HAWK-The-Paragliding-Camp.jpg',
     'http://www.bn1kitesurfing.co.uk/wp-content/uploads/2013/05/BN1-Kit-Home-Page-Main-1024x681.jpg'
   ];

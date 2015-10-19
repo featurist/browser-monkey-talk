@@ -6,3 +6,4 @@ var router = require('mock-xhr-router');
 var expect = require('chai').expect;
 var createApi = require('./api');
 require('unset-timeout');
+var retry = require('trytryagain');

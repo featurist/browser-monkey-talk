@@ -12,7 +12,7 @@ npm install
 
 # Links
 
-* The [slide deck](https://github.com/featurist/softshake-2015/blob/master/TDD%20for%20Front-End%20Hackers.key) to this talk.
+* The [slide deck](https://github.com/featurist/softshake-2015/blob/master/TDD%20for%20Front-End%20Hackers.key?raw=true) to this talk.
 * [@dereke](https://github.com/dereke) has made an excellent [video](https://www.youtube.com/watch?v=WQZ2eIfmfEs) of a TDD session using browser-monkey.
 * Here is another [example project](https://github.com/dereke/web-testing) that demonstrates how to use browser-monkey with Karma.
 

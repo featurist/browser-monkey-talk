@@ -10,20 +10,30 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha', 'browserify'],
+    frameworks: [
+      // mocha test framework
+      'mocha',
+      // browserify for stitching JS files together using require
+      'browserify'
+    ],
 
 
     // list of files / patterns to load in the browser
     files: [
+      // CSS
       'browser/style/style.css',
+      // example images
       {pattern: 'test/browser/images/*', included: false, served: true},
+      // fonts used in CSS
       {pattern: 'node_modules/font-awesome/fonts/**', included: false, served: true},
+      // specifications
       'test/**/*Spec.js'
     ],
 
 
     // list of files to exclude
     exclude: [
+      // vim swap files
       '**/*.sw?'
     ],
 
@@ -31,16 +41,20 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      // which files to browserify
       'test/**/*.js': [ 'browserify' ]
     },
 
     browserify: {
+      // source maps
       debug: true,
+      // JSX support for plastiq
       transform: ['plastiq-jsxify'],
       extensions: ['.jsx']
     },
 
     proxies: {
+      // map requests to the left, to file paths on the right
       '/images/': '/base/test/browser/images/',
       '/base/browser/fonts/': '/base/node_modules/font-awesome/fonts/'
     },

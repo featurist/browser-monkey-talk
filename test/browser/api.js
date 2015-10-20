@@ -94,6 +94,12 @@ module.exports = function () {
 
     images: function () {
       return _.values(images);
+    },
+
+    imageUrls: function () {
+      return this.images().map(function (image) {
+        return image.url;
+      });
     }
   }
 };

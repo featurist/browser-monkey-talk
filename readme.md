@@ -7,7 +7,7 @@ npm install
 # Structure
 
 * A commented Karma configuration is in [karma.conf.js](https://github.com/featurist/softshake-2015/blob/master/karma.conf.js)
-* Specification files are in [test/browser/](https://github.com/featurist/softshake-2015/tree/master/test/browser).
+* Specification files are in [test/browser](https://github.com/featurist/softshake-2015/tree/master/test/browser).
 * Images used in specifications are in [test/browser/images](https://github.com/featurist/softshake-2015/tree/master/test/browser/images).
 
 # Links

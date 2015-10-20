@@ -6,13 +6,13 @@ npm install
 
 # Structure
 
-* Karma configuration is in [karma.conf.js]()
-* Specification files are in [test/browser/](), configued [here]().
-* Images used in specifications are in [test/browser/images](), configured [here]().
+* A commented Karma configuration is in [karma.conf.js](https://github.com/featurist/softshake-2015/blob/master/karma.conf.js)
+* Specification files are in [test/browser/](https://github.com/featurist/softshake-2015/tree/master/test/browser).
+* Images used in specifications are in [test/browser/images](https://github.com/featurist/softshake-2015/tree/master/test/browser/images).
 
 # Links
 
-* The [slide deck](https://github.com/featurist/softshake-2015-demo) to this talk.
+* The [slide deck](https://github.com/featurist/softshake-2015/blob/master/TDD%20for%20Front-End%20Hackers.key) to this talk.
 * [@dereke](https://github.com/dereke) has made an excellent [video](https://www.youtube.com/watch?v=WQZ2eIfmfEs) of a TDD session using browser-monkey.
 * Here is another [example project](https://github.com/dereke/web-testing) that demonstrates how to use browser-monkey with Karma.
 

@@ -49,3 +49,7 @@ npm install
 * [qo](https://github.com/featurist/qo)
 
     A task runner that's not mental.
+
+* [emmet](https://github.com/mattn/emmet-vim)
+
+    HTML expansion and completion in Vim and other editors.

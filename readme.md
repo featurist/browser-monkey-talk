@@ -22,6 +22,10 @@ npm install
 
     Reliable DOM assertion and interaction library for automated tests in the browser
 
+* [plastiq](https://github.com/featurist/plastiq)
+
+    A fast, feature rich and simple virtual-dom framework for building dynamic browser applications.
+
 * [trytryagain](https://github.com/featurist/trytryagain)
 
     If at first your expectation does not pass, try try again. Useful to make assertions on things that don't happen immediately.

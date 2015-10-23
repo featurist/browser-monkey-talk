@@ -1,6 +1,6 @@
 # Soft-Shake 2015: TDD for Front-End Hackers
 
-The [done](https://github.com/featurist/softshake-2015/tree/done) branch contains the working implementation. The [talk](https://github.com/featurist/softshake-2015/tree/done) branch contains the implementation made during the talk.
+The [done](https://github.com/featurist/softshake-2015/tree/done) branch contains the working implementation. The [talk](https://github.com/featurist/softshake-2015/tree/done) branch contains the implementation made during the talk. The [master](https://github.com/featurist/softshake-2015/tree/master) branch contains the empty starting point so you can try it yourself.
 
 ## initial setup
 

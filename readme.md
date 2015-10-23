@@ -1,7 +1,23 @@
 # Soft-Shake 2015: TDD for Front-End Hackers
 
+The [done](https://github.com/featurist/softshake-2015/tree/done) branch contains the working implementation. The [talk](https://github.com/featurist/softshake-2015/tree/done) branch contains the implementation made during the talk.
+
+## initial setup
+
 ```js
 npm install
+```
+
+## running the server
+
+```js
+node server/server.js
+```
+
+## running the tests
+
+```js
+karma start
 ```
 
 # Structure

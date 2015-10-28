@@ -49,6 +49,10 @@ karma start
 
     If at first your expectation does not pass, try try again. Useful to make assertions on things that don't happen immediately.
 
+* [httpism](https://github.com/featurist/httpism)
+
+    A feature-rich HTTP client with very useful defaults.
+
 * [mock-xhr-router](https://github.com/featurist/mock-xhr-router)
 
     Fake out your server API in the browser.

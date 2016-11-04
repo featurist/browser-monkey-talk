@@ -1,9 +1,14 @@
-var mount = require('./mountPlastiq');
+var mount = require('./mountHyperdom');
 var createApp = require('../../browser/app');
 var browser = require('browser-monkey');
-window._debug = require('debug');
-var router = require('mock-xhr-router');
 var expect = require('chai').expect;
 var createApi = require('./api');
 require('unset-timeout');
-var retry = require('trytryagain');
+
+describe('images app', function () {
+  it('can show images');
+  it('can vote images up');
+  it('can add a new image');
+  it('can vote an image up');
+  it('can vote an image down');
+});

@@ -1,7 +1,6 @@
-window.Promise = require('bluebird');
-var plastiq = require('plastiq');
-var createApp = require('./app');
+var hyperdom = require('hyperdom');
+var App = require('./app');
 
-var app = createApp();
+var app = new App();
 
-plastiq.append(document.body, app);
+hyperdom.append(document.body, app);

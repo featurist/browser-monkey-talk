@@ -36,7 +36,7 @@ app.use('/font-awesome/fonts', express.static(__dirname + '/../node_modules/font
 
 app.use('/style', less(__dirname + '/../browser/style', {debug: true}));
 app.get('/index.js', browserify(__dirname + '/../browser/index.js', {
-  transform: ['plastiq-jsxify'],
+  transform: ['babelify'],
   extensions: ['.jsx']
 }));
 

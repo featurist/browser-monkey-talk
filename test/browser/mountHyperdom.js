@@ -1,4 +1,4 @@
-var plastiq = require('plastiq');
+var hyperdom = require('hyperdom');
 var mountTest = require('./mountTest');
 
 var lastAttachment;
@@ -9,7 +9,7 @@ module.exports = function (app, options) {
   }
 
   var div = mountTest(options);
-  plastiq.append(div, app, undefined, {
+  hyperdom.append(div, app, {
     requestRender: setTimeout
   });
 };

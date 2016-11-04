@@ -49,7 +49,7 @@ module.exports = function(config) {
       // source maps
       debug: true,
       // JSX support for plastiq
-      transform: ['plastiq-jsxify'],
+      transform: ['babelify'],
       extensions: ['.jsx']
     },
 

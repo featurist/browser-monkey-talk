@@ -1,6 +1,6 @@
 var mountDiv;
 
-module.exports = function (options) {
+module.exports = function() {
   if (mountDiv) {
     mountDiv.parentNode.removeChild(mountDiv);
   }

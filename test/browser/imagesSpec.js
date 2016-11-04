@@ -9,8 +9,7 @@ var imagesApp = browser.find('#test');
 
 describe('images app', function () {
   it('can show images');
-  it('can vote images up');
-  it('can add a new image');
   it('can vote an image up');
   it('can vote an image down');
+  it('can add a new image');
 });

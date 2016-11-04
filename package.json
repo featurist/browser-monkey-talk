@@ -39,7 +39,8 @@
   },
   "scripts": {
     "test": "mocha",
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "css": "lessc browser/style/style.less > browser/style/style.css"
   },
   "author": "",
   "license": "ISC",

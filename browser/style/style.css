@@ -20,6 +20,14 @@ ol li .buttons .up:before {
 ol li .buttons .down:before {
   content: "\f063";
 }
+h1.splash {
+  margin: 0 auto;
+  margin-top: 100px;
+  max-width: 700px;
+  text-align: center;
+  font-size: 109.6px;
+  font-family: monospace;
+}
 form {
   text-align: center;
 }
@@ -46,7 +54,6 @@ ol li img {
   width: 400px;
 }
 ol li .buttons {
-  display: none;
   position: absolute;
   top: 10px;
   left: 13px;

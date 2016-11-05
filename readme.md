@@ -1,6 +1,6 @@
 # Soft-Shake 2015: TDD for Front-End Hackers
 
-The [done](https://github.com/featurist/softshake-2015/tree/done) branch contains the working implementation. The [talk](https://github.com/featurist/softshake-2015/tree/done) branch contains the implementation made during the talk. The [master](https://github.com/featurist/softshake-2015/tree/master) branch contains the empty starting point so you can try it yourself.
+The [done](https://github.com/featurist/browser-monkey-talk/tree/done) branch contains the working implementation. The [talk](https://github.com/featurist/browser-monkey-talk/tree/done) branch contains the implementation made during the talk. The [master](https://github.com/featurist/browser-monkey-talk/tree/master) branch contains the empty starting point so you can try it yourself.
 
 ## initial setup
 
@@ -22,16 +22,16 @@ karma start
 
 # Structure
 
-* A commented Karma configuration is in [karma.conf.js](https://github.com/featurist/softshake-2015/blob/master/karma.conf.js)
-* Specification files are in [test/browser](https://github.com/featurist/softshake-2015/tree/master/test/browser).
-* Images used in specifications are in [test/browser/images](https://github.com/featurist/softshake-2015/tree/master/test/browser/images).
+* A commented Karma configuration is in [karma.conf.js](karma.conf.js)
+* Specification files are in [test/browser](test/browser).
+* Images used in specifications are in [test/browser/images](test/browser/images).
 * The files we worked on in the talk:
-    * [test/browser/imagesSpec.js](https://github.com/featurist/softshake-2015/tree/master/test/browser/imagesSpec.js) the specification
-    * [browser/app.jsx](https://github.com/featurist/softshake-2015/tree/master/browser/app.jsx) the application
+    * [test/browser/imagesSpec.js](test/browser/imagesSpec.js) the specification
+    * [browser/app.jsx](browser/app.jsx) the application
 
 # Links
 
-* The [slide deck](https://github.com/featurist/softshake-2015/blob/master/TDD%20for%20Front-End%20Hackers.key?raw=true) to this talk.
+* The [slide deck](TDD%20for%20Front-End%20Hackers.key?raw=true) to this talk.
 * [@dereke](https://github.com/dereke) has made an excellent [video](https://www.youtube.com/watch?v=WQZ2eIfmfEs) of a TDD session using browser-monkey.
 * Here is another [example project](https://github.com/dereke/web-testing) that demonstrates how to use browser-monkey with Karma.
 

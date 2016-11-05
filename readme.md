@@ -1,4 +1,4 @@
-# Soft-Shake 2015: TDD for Front-End Hackers
+# Browser Monkey: TDD for Front-End Hackers
 
 The [done](https://github.com/featurist/browser-monkey-talk/tree/done) branch contains the working implementation. The [talk](https://github.com/featurist/browser-monkey-talk/tree/done) branch contains the implementation made during the talk. The [master](https://github.com/featurist/browser-monkey-talk/tree/master) branch contains the empty starting point so you can try it yourself.
 

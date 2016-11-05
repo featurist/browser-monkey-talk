@@ -41,7 +41,7 @@ karma start
 
     Reliable DOM assertion and interaction library for automated tests in the browser
 
-* [plastiq](https://github.com/featurist/plastiq)
+* [hyperdom](https://github.com/featurist/hyperdom)
 
     A fast, feature rich and simple virtual-dom framework for building dynamic browser applications.
 

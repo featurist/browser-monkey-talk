@@ -25,6 +25,9 @@ karma start
 * A commented Karma configuration is in [karma.conf.js](https://github.com/featurist/softshake-2015/blob/master/karma.conf.js)
 * Specification files are in [test/browser](https://github.com/featurist/softshake-2015/tree/master/test/browser).
 * Images used in specifications are in [test/browser/images](https://github.com/featurist/softshake-2015/tree/master/test/browser/images).
+* The files we worked on in the talk:
+    * [test/browser/imagesSpec.js](https://github.com/featurist/softshake-2015/tree/master/test/browser/imagesSpec.js) the specification
+    * [browser/app.jsx](https://github.com/featurist/softshake-2015/tree/master/browser/app.jsx) the application
 
 # Links
 
@@ -45,6 +48,10 @@ karma start
 * [trytryagain](https://github.com/featurist/trytryagain)
 
     If at first your expectation does not pass, try try again. Useful to make assertions on things that don't happen immediately.
+
+* [httpism](https://github.com/featurist/httpism)
+
+    A feature-rich HTTP client with very useful defaults.
 
 * [mock-xhr-router](https://github.com/featurist/mock-xhr-router)
 
